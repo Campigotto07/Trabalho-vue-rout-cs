@@ -5,7 +5,7 @@
         <div class="col-md-6">
             <h4>Listagem de Tipos</h4>
             <table class="table table-striped" >
-                <tr>
+                <tr> 
                     <th scope="col">Id</th>
                     <th scope="col">Descrição</th>
 

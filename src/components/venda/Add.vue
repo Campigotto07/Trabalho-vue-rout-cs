@@ -89,7 +89,7 @@
                 venda: {indice: '', 
                                     id: '', 
                                     valor: '',
-                                    forma_pagamento: [],
+                                    forma_pagamento: '',
                                     //data_venda: '', 
                                     cpf_comprador: '',                                                                        
                                     cpf_vendedor: '',  

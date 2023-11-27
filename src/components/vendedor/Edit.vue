@@ -7,57 +7,58 @@
                 <!-- Input CPF -->
                 <div class="form-group">
                     <label for="inputCpf">CPF:</label>
-                    <input type="number" v-model="currentVendedor.vendedor.cpf" class="form-control" id="inputCpf">
+                    <input type="number" v-model="currentVendedor.cpf" class="form-control" id="inputCpf" disabled>
                 </div>
 
                 <!-- Input Nome -->
                 <div class="form-group">
                         <label for="inputNome">Nome:</label>
-                        <input type="text" v-model="currentVendedor.vendedor.nome" class="form-control" id="inputNome">
+                        <input type="text" v-model="currentVendedor.nome" class="form-control" id="inputNome">
                 </div>
 
                 <!-- Input dt_nascimento -->
                 <div class="form-group">
                     <label for="inputDt_nascimento">Data Nascimento:</label>
-                    <input type="date" v-model="currentVendedor.vendedor.dt_nascimento" class="form-control" id="inputDt_nascimento">
+                    <input type="date" v-model="currentVendedor.dt_nascimento" class="form-control" id="inputDt_nascimento">
                 </div>
 
                 <!-- Input Endereco -->
                 <div class="form-group">
                     <label for="inputEndereco">Endereço:</label>
-                    <input type="text" v-model="currentVendedor.vendedor.endereco" class="form-control" id="inputEndereco">
+                    <input type="text" v-model="currentVendedor.endereco" class="form-control" id="inputEndereco">
                 </div>
 
                 <!-- Input Telefone -->
                 <div class="form-group">
                     <label for="inputTelefone">Telefone:</label>
-                    <input type="text" v-model="currentVendedor.vendedor.telefone" class="form-control" id="inputTelefone">
+                    <input type="text" v-model="currentVendedor.telefone" class="form-control" id="inputTelefone">
                 </div>
 
                 <!-- Input E-mail -->
                 <div class="form-group">
                     <label for="inputEmail">E-mail:</label>
-                    <input type="email" v-model="currentVendedor.vendedor.email" class="form-control" id="inputEmail">
+                    <input type="email" v-model="currentVendedor.email" class="form-control" id="inputEmail">
                 </div>  
 
                 <!-- Input Senha -->
                 <div class="form-group">
                     <label for="inputSenha">Senha:</label>
-                    <input type="password" v-model="currentVendedor.vendedor.senha" class="form-control" id="inputSenha">
+                    <input type="password" v-model="currentVendedor.senha" class="form-control" id="inputSenha">
                 </div>  
 
                 <!-- Input Salário fixo -->
                 <div class="form-group">
                     <label for="inputSalarioFixo">Salário Fixo:</label>
-                    <input type="number" v-model="currentVendedor.vendedor.salario_fixo" class="form-control" id="inputSalarioFixo">
+                    <input type="number" v-model="currentVendedor.salario_fixo" class="form-control" id="inputSalarioFixo">
                 </div>
                 
                 <!-- Input Comissão Venda -->
                 <div class="form-group">
                     <label for="inputComissaoVenda">Comissão Venda:</label>
-                    <input type="number" v-model="currentVendedor.vendedor.comissao_venda" class="form-control" id="inputComissaoVenda">
+                    <input type="number" v-model="currentVendedor.comissao_venda" class="form-control" id="inputComissaoVenda">
                 </div>  
-
+                
+                 
                 <div class="form-group">
                     <label for="selectVeiculo">Veiculos:</label>
                     <select v-model="currentVendedor.veiculos" class="form-control" id="selectVeiculo" multiple>                                
@@ -66,6 +67,7 @@
                             </option>
                     </select>
                 </div>                       
+             
             </form>
             <button class="badge badge-success" @click="updateVendedor">Salvar</button>
             <button class="badge badge-danger mr-2" @click="deleteVendedor">Delete</button>
@@ -99,11 +101,13 @@
          methods: {
 
             getVendedor(cpf){
-
+                
                 VendedorDataService.get(cpf)
                 .then(response => {
                     console.log(response.data);
                     this.currentVendedor = response.data;
+                    console.log(this.currentVendedor);
+                    
                     
                 })
                 .catch(e=> {
@@ -139,7 +143,7 @@
             },
             deleteVendedor(){
                 console.log("Entrou delete Vendedor (edit.vue)");
-                VendedorDataService.delete(this.currentTutorial.cpf)
+                VendedorDataService.delete(this.currentVendedor.cpf)
                 .then(response => {
                     console.log(response.data);
                     this.$router.push({ name: "vendedores-list" });

@@ -13,13 +13,13 @@ class VendedorDataService {
     async get(cpf){
 
         console.log('VendedorDataService.get: ', cpf);
-        return await http.get('/vendedor/'+cpf);
+        return await http.get('/vendedor/find/'+cpf);
     }
 
     async list(){
 
         console.log('VendedorDataService.list: ');
-        return await http.get(`/vendedor/list`);
+        return await http.get(`/vendedor/list`); 
     }
 
     async delete(cpf){
@@ -31,7 +31,7 @@ class VendedorDataService {
     async update(data){
 
         console.log('VendedorDataService.update: ', data);
-        return await http.post(`/vendedor/update`, data);
+        return await http.post(`/vendedor/update/:cpf`, data);
     }
     
     async create(data){

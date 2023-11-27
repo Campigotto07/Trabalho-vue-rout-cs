@@ -6,7 +6,7 @@
             <h4>Listagem de Compradores</h4>
             <table class="table table-striped" > 
                 <tr>
-                    <th scope="col">Cpf</th>
+                    <th scope="col">Cpf</th> 
                     <th scope="col">Nome</th>
                     <th scope="col">Dt_nascimento</th>
                     <th scope="col">Endereço</th>
@@ -67,7 +67,7 @@
 
 
                     <a class="badge badge-warning"
-                    :href="'/comprador/' + currentComprador.cpf"
+                    :href="'/comprador/update/' + currentComprador.cpf"
                     >
                     Edit
                     </a>

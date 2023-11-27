@@ -11,14 +11,14 @@ class VeiculoDataService {
 
     async update(data){
 
-        console.log('VeiculoDataService.update: ');
-        return await http.post(`/veiculo/update`);
+        console.log('VeiculoDataService.update:', data);
+        return await http.post(`/veiculo/update/:id`, data);
     }
 
-    async get(cpf){
+    async get(id){
 
         console.log('VeiculoDataService.get: ', id);
-        return await http.get('/veiculo/'+id);
+        return await http.get('/veiculo/find/'+id);
     }
 
     

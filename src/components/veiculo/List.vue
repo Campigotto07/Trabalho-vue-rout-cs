@@ -16,7 +16,7 @@
                     <th scope="col">Combustivel</th>
                     <th scope="col">Preco</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Tipo</th> 
+                    <th scope="col">Tipo</th>  
 
                     <th scope="col">Alterar</th>
                     <th scope="col">Remover</th>
@@ -45,45 +45,45 @@
         </div>
 
         <div class="col-md-6">
-            <div v-if="currentVeiculos">
+            <div v-if="currentVeiculo">
                     <h4>Veiculos</h4>
                     <div>
-                    <label><strong>id:</strong></label> {{ currentVeiculos.id }}
+                    <label><strong>id:</strong></label> {{ currentVeiculo.id }}
                     </div>
                     <div>
-                    <label><strong>Placa:</strong></label> {{ currentVeiculos.placa}}
+                    <label><strong>Placa:</strong></label> {{ currentVeiculo.placa}}
                     </div>
                     <div>
-                        <label><strong>Ano:</strong></label> {{ currentVeiculos.ano}}
+                        <label><strong>Ano:</strong></label> {{ currentVeiculo.ano}}
                     </div>
                     <div>
-                        <label><strong>Cor:</strong></label> {{ currentVeiculos.cor }}
+                        <label><strong>Cor:</strong></label> {{ currentVeiculo.cor }}
                     </div>
                     <div>
-                        <label><strong>Qtd_passageiros:</strong></label> {{ currentVeiculos.qtd_passageiros }}
+                        <label><strong>Qtd_passageiros:</strong></label> {{ currentVeiculo.qtd_passageiros }}
                     </div>
                     <div>
-                        <label><strong>Modelo:</strong></label> {{ currentVeiculos.modelo }}
+                        <label><strong>Modelo:</strong></label> {{ currentVeiculo.modelo }}
                     </div>
                     <div>
-                        <label><strong>Marca:</strong></label> {{ currentVeiculos.marca }}
+                        <label><strong>Marca:</strong></label> {{ currentVeiculo.marca }}
                     </div>
                     <div>
-                        <label><strong>Combustivel:</strong></label> {{ currentVeiculos.combustivel }}
+                        <label><strong>Combustivel:</strong></label> {{ currentVeiculo.combustivel }}
                     </div>
                     <div>
-                        <label><strong>Preco:</strong></label> {{ currentVeiculos.preco }}
+                        <label><strong>Preco:</strong></label> {{ currentVeiculo.preco }}
                     </div>
                     <div>
-                        <label><strong>Status:</strong></label> {{ currentVeiculos.status }}
+                        <label><strong>Status:</strong></label> {{ currentVeiculo.status }}
                     </div>
                     <div>
-                        <label><strong>Tipo:</strong></label> {{ currentVeiculos.tipo }}
+                        <label><strong>Tipo:</strong></label> {{ currentVeiculo.tipo.descricao }}
                     </div>
 
 
                     <a class="badge badge-warning"
-                    :href="'/veiculos/' + currentVeiculos.id"
+                    :href="'/veiculo/update/' + currentVeiculo.id"
                     >
                     Edit
                     </a>
@@ -108,7 +108,7 @@
       data() {
              return {
                 veiculos: [],
-                 currentVeiculos: null,
+                 currentVeiculo: null,
                  currentIndex: -1
              }
          },
@@ -129,7 +129,6 @@
                 });
             },
             setCurrentVeiculo(veiculo, index){
-
                 this.currentVeiculo = veiculo;
                 this.currentIndex = index;
             },

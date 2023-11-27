@@ -54,7 +54,7 @@ const router = new Router({
       component: listVendedores    
     },
     {
-      path: '/vendedor/:cpf',
+      path: '/vendedor/update/:cpf',
       name: "vendedor-edit",
       component: editVendedor
     },
@@ -68,11 +68,11 @@ const router = new Router({
     //Comprador
     {
       path: '/compradores',
-      name: 'compradores--list',
+      name: 'compradores-list',
       component: listCompradores    
     },
     {
-      path: '/comprador/:cpf',
+      path: '/comprador/update/:cpf',
       name: "comprador-edit",
       component: editComprador
     },
@@ -90,7 +90,7 @@ const router = new Router({
       component: listVeiculos   
     },
     {
-      path: '/veiculo/:id',
+      path: '/veiculo/update/:id',
       name: "veiculo-edit",
       component: editVeiculo
     },

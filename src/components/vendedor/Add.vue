@@ -120,7 +120,7 @@
                     VendedorDataService.create(vndor)
                     .then(response => {
                         
-                        this.submitted = true;
+                        this.submitted = true; 
                     })
                     .catch(e => {                        
                         alert("Erro ao tentar cadastrar vendedor. !!! " + e.message);

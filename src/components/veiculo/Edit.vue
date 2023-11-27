@@ -7,66 +7,66 @@
                 <!-- Input ID -->
                 <div class="form-group">
                     <label for="inputID">ID:</label>
-                    <input type="number" v-model="currentVeiculo.veiculo.id" class="form-control" id="inputID" disabled>
+                    <input type="number" v-model="currentVeiculo.id" class="form-control" id="inputID" disabled>
                 </div>
 
                 <!-- Input Placa -->
                 <div class="form-group">
                         <label for="inputPlaca">Placa:</label>
-                        <input type="text" v-model="currentVeiculo.veiculo.placa" class="form-control" id="inputPlaca">
+                        <input type="text" v-model="currentVeiculo.placa" class="form-control" id="inputPlaca">
                 </div>
 
                 <!-- Input Ano -->
                 <div class="form-group">
                     <label for="inputAno">Ano:</label>
-                    <input type="number" v-model="currentVeiculo.veiculo.ano" class="form-control" id="inputAno">
+                    <input type="number" v-model="currentVeiculo.ano" class="form-control" id="inputAno">
                 </div>
 
                 <!-- Input Cor -->
                 <div class="form-group">
                     <label for="inputCor">Cor:</label>
-                    <input type="text" v-model="currentVeiculo.veiculo.cor" class="form-control" id="inputCor">
+                    <input type="text" v-model="currentVeiculo.cor" class="form-control" id="inputCor">
                 </div>
 
                 <!-- Input Qtd_passageiros -->
                 <div class="form-group">
                     <label for="inputQtd_passageiros">Qtd Passageiros:</label>
-                    <input type="number" v-model="currentVeiculo.veiculo.qtd_passageiros" class="form-control" id="inputQtd_passageiros">
+                    <input type="number" v-model="currentVeiculo.qtd_passageiros" class="form-control" id="inputQtd_passageiros">
                 </div>
 
                 <!-- Input Modelo -->
                 <div class="form-group">
                     <label for="inputModelo">Modelo:</label>
-                    <input type="text" v-model="currentVeiculo.veiculo.modelo" class="form-control" id="inputModelo">
+                    <input type="text" v-model="currentVeiculo.modelo" class="form-control" id="inputModelo">
                 </div>  
 
                 <!-- Input Marca -->
                 <div class="form-group">
                     <label for="inputMarca">Marca:</label>
-                    <input type="text" v-model="currentVeiculo.veiculo.marca" class="form-control" id="inputMarca">
+                    <input type="text" v-model="currentVeiculo.marca" class="form-control" id="inputMarca">
                 </div>  
 
                 <!-- Input Combustivel -->
                 <div class="form-group">
                     <label for="inputCombustivel">Combustivel:</label>
-                    <input type="text" v-model="currentVeiculo.veiculo.combustivel" class="form-control" id="inputCombustivel">
+                    <input type="text" v-model="currentVeiculo.combustivel" class="form-control" id="inputCombustivel">
                 </div>
                 
                 <!-- Input Preco -->
                 <div class="form-group">
                     <label for="inputPreco">Preço:</label>
-                    <input type="number" v-model="currentVeiculo.veiculo.preco" class="form-control" id="inputPreco">
+                    <input type="number" v-model="currentVeiculo.preco" class="form-control" id="inputPreco">
                 </div> 
                 
                 <!-- Input Status -->
                 <div class="form-group">
                     <label for="inputStatus">Status:</label>
-                    <input type="text" v-model="currentVeiculo.veiculo.status" class="form-control" id="inputStatus">
+                    <input type="checkbox" v-model="currentVeiculo.status" class="form-control" id="inputStatus" >
                 </div>
 
                 <div class="form-group">
                     <label for="selectTipo">Tipos:</label>
-                    <select v-model="currentVeiculo.tipos" class="form-control" id="selectTipo" multiple>                                
+                    <select v-model="currentVeiculo.tipo" class="form-control" id="selectTipo">                                
                         <option v-for="t in tipos" :key ="t.codigo" v-bind:value="t">
                             {{ t.descricao }}
                             </option>
@@ -147,7 +147,7 @@
             },
             deleteVeiculo(){
                 console.log("Entrou delete Veiculo (edit.vue)");
-                VeiculoDataService.delete(this.currentTutorial.id)
+                VeiculoDataService.delete(this.currentComprador.id)
                 .then(response => {
                     console.log(response.data);
                     this.$router.push({ name: "veiculos-list" });

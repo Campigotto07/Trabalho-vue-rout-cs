@@ -6,7 +6,7 @@ class CompradorDataService {
     async get(cpf){
 
         console.log('CompradorDataService.get: ', cpf);
-        return await http.get('/comprador/'+cpf);
+        return await http.get('/comprador/find/'+ cpf);
     }
 
     async list(){
@@ -24,7 +24,7 @@ class CompradorDataService {
     async update(data){
 
         console.log('CompradorDataService.update: ', data);
-        return await http.post(`/comprador/update`, data);
+        return await http.post(`/comprador/update/:cpf`, data);
     }
     
     async create(data){

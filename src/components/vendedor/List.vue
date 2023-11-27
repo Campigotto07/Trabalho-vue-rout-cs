@@ -15,8 +15,6 @@
                     <th scope="col">Salario_fixo</th>
                     <th scope="col">Comissão_venda</th>
                     <th scope="col">Senha</th> 
-                    <!-- Veiculos ??? --> 
-                    <th scope="col">Veiculo</th>  
 
                     <th scope="col">Alterar</th> 
                     <th scope="col">Remover</th>
@@ -32,8 +30,6 @@
                             <td>{{v.salario_fixo}}</td>
                             <td>{{v.comissao_venda}}</td>
                             <td>{{v.senha}}</td>
-                            <!-- Veiculos ??? -->
-                            <td>{{v.veiculos}}</td>
                                                 
                             <td><button v-on:click="setCurrentVendedor(v, indice)" class="btn" type="button">Alterar</button></td>
                             <td><button v-on:click="remVendedor(v, indice)" class="btn" type="button">Remover</button></td>
@@ -73,13 +69,10 @@
                     <div>
                         <label><strong>Senha:</strong></label> {{ currentVendedor.senha }}
                     </div>
-                    <div>
-                        <label><strong>Veiculo:</strong></label> {{ currentVendedor.veiculo }}
-                    </div>
 
 
                     <a class="badge badge-warning"
-                    :href="'/vendedor/' + currentVendedor.cpf"
+                    :href="'/vendedor/update/' + currentVendedor.cpf"
                     >
                     Edit
                     </a>

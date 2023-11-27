@@ -2,7 +2,7 @@
     <div class="submit-form">
       <div v-if="!submitted">   
 
-        <!-- Input ID -->
+        <!-- Input ID --> 
         <div class="form-group">
             <label for="inputID">ID:</label>
             <input type="number" v-model="veiculo.id" class="form-control" id="inputID" disabled>
@@ -59,12 +59,16 @@
         <!-- Input Status -->
         <div class="form-group">
             <label for="inputStatus">Status:</label>
-            <input type="text" v-model="veiculo.status" class="form-control" id="inputStatus">
+            <input type="checkbox" v-model="veiculo.status" class="form-control" id="inputStatus" >
         </div>
+        <!-- <div class="form-group">
+            <label for="inputStatus">Status:</label>
+            <input type="text" v-model="veiculo.status" class="form-control" id="inputStatus" >
+        </div> -->
 
         <div class="form-group">
             <label for="selectTipo">Tipos:</label>
-            <select v-model="veiculo.tipos" class="form-control" id="selectTipo" multiple>                                
+            <select v-model="veiculo.tipos" class="form-control" id="selectTipo">                                
                 <option v-for="t in tipos" :key ="t.codigo" v-bind:value="t">
                     {{ t.descricao }}
                     </option>
@@ -125,7 +129,6 @@
                 v.cor.trim().length > 0 && v.qtd_passageiros.trim().length > 0 && 
                 v.modelo.trim().length > 0 && v.marca.trim().length > 0
                 && v.combustivel.trim().length > 0 && v.preco.trim().length > 0
-                && v.status.trim().length >= 0
                 ) {
                 
                     VeiculoDataService.create(v)

@@ -12,7 +12,7 @@
                     <th scope="col">Data Venda</th>
                     <th scope="col">Cpf_comprador</th>
                     <th scope="col">Cpf_vendedor</th>
-                    <th scope="col">Veiculo</th>  
+                    <!-- <th scope="col">Veiculo</th>   -->
 
                     <th scope="col">Alterar</th> 
                     <th scope="col">Remover</th>
@@ -22,10 +22,11 @@
                             <td>{{vend.id}}</td>
                             <td>{{vend.valor}}</td>
                             <td>{{vend.forma_pagamento}}</td>
-                            <td>{{vend.data_venda | formataData}}</td>
+                            <td>{{vend.data_venda}}</td>
                             <td>{{vend.cpf_comprador}}</td>
                             <td>{{vend.cpf_vendedor}}</td>
-                            <td>{{vend.veiculos}}</td>
+                            <!-- <td>{{vend.veiculo}}</td> -->
+                            
                                                 
                             <td><button v-on:click="setCurrentVenda(vend, indice)" class="btn" type="button">Alterar</button></td>
                             <td><button v-on:click="remVenda(vend, indice)" class="btn" type="button">Remover</button></td>
@@ -56,9 +57,9 @@
                     <div>
                         <label><strong>Cpf_vendedor:</strong></label> {{ currentVenda.cpf.vendedor }}
                     </div>
-                    <div>
+                    <!-- <div>
                         <label><strong>Veiculo:</strong></label> {{ currentVenda.veiculo }}
-                    </div>
+                    </div> -->
 
 
                     <a class="badge badge-warning"
@@ -82,7 +83,7 @@
     
  
      import VendaDataService from '../../services/VendaDataService'
-     import VeiculoDataService from '../../services/VeiculoDataService'    
+     //import VeiculoDataService from '../../services/VeiculoDataService'    
  
      export default{
       name:'listVendas',
