@@ -7,7 +7,7 @@
             <table class="table table-striped" >
                 <tr>
                     <th scope="col">id</th>
-                    <th scope="col">Placa</th>
+                    <th scope="col">Placa</th> 
                     <th scope="col">Ano</th>
                     <th scope="col">Cor</th>
                     <th scope="col">Qtd_passageiros</th>
@@ -33,7 +33,7 @@
                             <td>{{v.combustivel}}</td>
                             <td>{{v.preco}}</td>
                             <td>{{v.status}}</td>
-                            <td>{{v.tipo.descricao}}</td>
+                            <td>{{v.tipos.descricao}}</td>
 
                                                 
                             <td><button v-on:click="setCurrentVeiculo(v, indice)" class="btn" type="button">Alterar</button></td>
@@ -78,7 +78,7 @@
                         <label><strong>Status:</strong></label> {{ currentVeiculo.status }}
                     </div>
                     <div>
-                        <label><strong>Tipo:</strong></label> {{ currentVeiculo.tipo.descricao }}
+                        <label><strong>Tipo:</strong></label> {{ currentVeiculo.tipos.descricao }}
                     </div>
 
 

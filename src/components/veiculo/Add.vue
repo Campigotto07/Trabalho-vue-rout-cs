@@ -2,13 +2,7 @@
     <div class="submit-form">
       <div v-if="!submitted">   
 
-        <!-- Input ID --> 
-        <div class="form-group">
-            <label for="inputID">ID:</label>
-            <input type="number" v-model="veiculo.id" class="form-control" id="inputID" disabled>
-        </div>
-
-        <!-- Input Placa -->
+        <!-- Input Placa --> 
         <div class="form-group">
                 <label for="inputPlaca">Placa:</label>
                 <input type="text" v-model="veiculo.placa" class="form-control" id="inputPlaca">
@@ -100,7 +94,6 @@
         data(){
             return {
                 veiculo: {indice: '', 
-                                    id: 0, 
                                     placa: '',
                                     ano: 0, 
                                     cor: '',                                                                        
@@ -110,7 +103,7 @@
                                     combustivel: '',
                                     preco: 0,
                                     status: 0,
-                                    tipos: []},
+                                    tipos: {}},
                 submitted: false,
                 tipos: []
 
@@ -122,8 +115,8 @@
                 console.log("Clicou no botão salvar Veiculo");
 
                 var v = jQuery.extend({}, this.veiculo);//clona o this.novo_veiculo e armazena na variavel veiculo. dessa forma alteracoes em this.novo_veiculo nao irao refletir em veiculo.                        
-                var tip = jQuery.extend({}, this.veiculo.tipo);//clona o this.novo_veiculo.tipo 
-                v.tipo = tip;                                                
+                var tip = jQuery.extend({}, this.veiculo.tipos);//clona o this.novo_veiculo.tipo 
+                v.tipos = tip;                                                
 
                 if (v.placa.trim().length > 0 && v.ano.trim().length > 0 && 
                 v.cor.trim().length > 0 && v.qtd_passageiros.trim().length > 0 && 

@@ -98,9 +98,9 @@
                                     salario_fixo: 0,
                                     comissao_venda: 0,
                                     senha: '',
-                                    veiculos: []},
+                                    veiculo: []},
                 submitted: false,
-                veiculos: []
+                veiculo: []
             }            
         },
         methods: {
@@ -109,7 +109,8 @@
 
                 var vndor = jQuery.extend({}, this.vendedor);//clona o this.novo_vendedor e armazena na variavel vendedor. dessa forma alteracoes em this.novo_vendedor nao irao refletir em vendedor.
                 var veic = jQuery.extend({}, this.vendedor.veiculo);//clona o this.novo_vendedor.endereco                        
-                vndor.veiculo = veic;                                                
+                vndor.veiculos.id = veic; 
+                console.log(veic);                                               
 
                 if (vndor.cpf.trim().length > 0 && vndor.nome.trim().length > 0 && 
                 vndor.dt_nascimento.trim().length > 0 && vndor.endereco.trim().length > 0 && 

@@ -61,8 +61,8 @@
                  
                 <div class="form-group">
                     <label for="selectVeiculo">Veiculos:</label>
-                    <select v-model="currentVendedor.veiculos" class="form-control" id="selectVeiculo" multiple>                                
-                        <option v-for="v in veiculos" :key ="v.codigo" v-bind:value="v">
+                    <select v-model="currentVendedor.veiculo" class="form-control" id="selectVeiculo" multiple>                                
+                        <option v-for="v in veiculos" :key ="v.id" v-bind:value="v">
                             {{ v.modelo }}
                             </option>
                     </select>
@@ -117,7 +117,7 @@
             listVeiculos(){
                 console.log("Entrou list Vendedor (edit.vue)");
 
-                VeiculoDataService.list().then(response =>{
+                VeiculoDataService.list_basico().then(response =>{
 
                     console.log("Retorno do seviço VeiculoDataService.list", response.status);
 

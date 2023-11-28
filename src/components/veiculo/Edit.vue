@@ -66,8 +66,8 @@
 
                 <div class="form-group">
                     <label for="selectTipo">Tipos:</label>
-                    <select v-model="currentVeiculo.tipo" class="form-control" id="selectTipo">                                
-                        <option v-for="t in tipos" :key ="t.codigo" v-bind:value="t">
+                    <select v-model="currentVeiculo.tipos" class="form-control" id="selectTipo">                                
+                        <option v-for="t in tipos" :key ="t.id" v-bind:value="t">
                             {{ t.descricao }}
                             </option>
                     </select>
@@ -125,7 +125,8 @@
 
                     console.log("Retorno do seviço TipoDataService.list", response.status);
 
-                    this.tipos = response.data;                                  
+                    this.tipos = response.data;
+                    console.log(response.data);                                  
 
                 }).catch(response => {
 

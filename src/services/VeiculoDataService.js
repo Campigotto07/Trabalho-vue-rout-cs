@@ -9,6 +9,12 @@ class VeiculoDataService {
         return await http.get(`/veiculo/list`);
     }
 
+    async list_basico(){
+
+        console.log('VeiculoDataService.list: ');
+        return await http.get(`/veiculo/list_basico`);
+    }
+
     async update(data){
 
         console.log('VeiculoDataService.update:', data);

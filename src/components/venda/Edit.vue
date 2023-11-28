@@ -2,24 +2,24 @@
     <div id="tab_aut">
      
        <div v-if="currentVenda" class="edit-form">
-            <h3>Venda</h3>
+            <h3>currentVenda</h3>
             <form>
                 <!-- Input ID -->
                 <div class="form-group">
                     <label for="inputId">ID:</label>
-                    <input type="number" v-model="currentVenda.venda.id" class="form-control" id="inputId" disabled>
+                    <input type="number" v-model="currentVenda.id" class="form-control" id="inputId" disabled>
                 </div> 
 
                 <!-- Input Valor -->
                 <div class="form-group">
                         <label for="inputValor">Valor:</label>
-                        <input type="number" v-model="currentVenda.venda.valor" class="form-control" id="inputValor">
+                        <input type="number" v-model="currentVenda.valor" class="form-control" id="inputValor">
                 </div>
 
-                <!-- Input Data Venda -->
+                <!-- Input Data currentVenda -->
                 <div class="form-group">
                     <label for="inputDt_venda">Data Venda:</label>
-                    <input type="number" v-model="currentVenda.venda.data_venda" class="form-control" id="inputDt_venda" disabled>
+                    <input type="number" v-model="currentVenda.data_venda" class="form-control" id="inputDt_venda" disabled>
                 </div>
 
 
@@ -27,13 +27,13 @@
                 <!-- 
                 <div class="form-group">
                     <label for="inputFormaPagamento">Forma Pagamento:</label>
-                    <input type="text" v-model="venda.forma_pagamento" class="form-control" id="inputFormaPagamento" >
+                    <input type="text" v-model="currentVenda.forma_pagamento" class="form-control" id="inputFormaPagamento" >
                 </div>    
                 -->
 
                 <div class="form-group">
                     <label for="selectForma_Pagamento">Forma Pagamento:</label>
-                    <select v-model="currentVenda.venda.forma_pagamento" class="form-control" id="selectForma_Pagamento" multiple>                                
+                    <select v-model="currentVenda.forma_pagamento" class="form-control" id="selectForma_Pagamento" >                                
                         <option value="pix">Pix</option>
                         <option value="cartaoCredito">Cartão no Credito</option>
                         <option value="cartaoDebito">Cartão no Débito</option>
@@ -41,23 +41,32 @@
                     </select>    
                 </div> 
 
-                <!-- CPF Comprador -->
+                <!-- Select Compradores -->
                 <div class="form-group">
-                    <label for="inputCpf_comprador">CPF Comprador:</label>
-                    <input type="text" v-model="currentVenda.venda.cpf_comprador" class="form-control" id="inputCpf_comprador">
+                    <label for="selectComprador">Compradores:</label>
+                    <select v-model="currentVenda.comprador" class="form-control" id="selectComprador">                                
+                        <option v-for="c in comprador" :key ="c.cpf" v-bind:value="c">
+                            {{ c.nome }}
+                        </option>
+                    </select>
                 </div>
 
-                <!-- CPF Vendedor -->
+        
+                <!-- Select Vendedores -->
                 <div class="form-group">
-                    <label for="inputCpf_vendedor">CPF Vendedor:</label>
-                    <input type="text" v-model="currentVenda.venda.endereco" class="form-control" id="inputCpf_vendedor">
+                    <label for="selectVendedor">Vendedores:</label>
+                    <select v-model="currentVenda.vendedor" class="form-control" id="selectVendedor">                                
+                        <option v-for="v in vendedor" :key ="v.cpf" v-bind:value="v">
+                            {{ v.nome }}
+                        </option>
+                    </select>
                 </div>
 
                 <!-- Select de Veiculos -->
                 <div class="form-group">
                     <label for="selectVeiculo">Veiculos:</label>
                     <select v-model="currentVenda.veiculos" class="form-control" id="selectVeiculo" multiple>                                
-                        <option v-for="v in veiculos" :key ="v.codigo" v-bind:value="v">
+                        <option v-for="v in veiculos" :key ="v.id" v-bind:value="v">
                             {{ v.modelo }}
                             </option>
                     </select>
@@ -73,7 +82,7 @@
        </div>
        <div v-else>
             <br />
-            <p>Por favor clique em uma Venda...</p>
+            <p>Por favor clique em uma currentVenda...</p>
         </div>
 
                                           
@@ -83,6 +92,8 @@
  
      import VendaDataService from '../../services/VendaDataService'
      import VeiculoDataService from '../../services/VeiculoDataService'
+     import CompradorDataService from '../../services/CompradorDataService'
+     import VendedorDataService from '../../services/VendedorDataService'
  
      export default{
       name:'editVendas',
@@ -90,7 +101,9 @@
              return {                
                  currentVenda: null,
                  message: '',
-                 veiculos: []
+                 veiculos: [],
+                 comprador: [],
+                 vendedor: []
              }
          },
          methods: {
@@ -108,9 +121,9 @@
                 })
             },
             listVeiculos(){
-                console.log("Entrou list Venda (edit.vue)");
+                console.log("Entrou list currentVenda (edit.vue)");
 
-                VeiculoDataService.list().then(response =>{
+                VeiculoDataService.list_basico().then(response =>{
 
                     console.log("Retorno do seviço VeiculoDataService.list", response.status);
 
@@ -123,20 +136,55 @@
                 console.log(response);
                 });               
             },
+            listCompradores(){
+                CompradorDataService.list().then(response =>{
+
+                console.log("Retorno do seviço CompradorDataService.list", response.status);
+
+                for(let c of response.data){
+
+                    this.comprador.push(c);
+                }                  
+
+                }).catch(response => {
+
+                // error callback
+                alert('Não conectou no serviço CompradorDataService.list');
+                console.log(response);
+                });               
+            },
+            listVendedores(){
+                VendedorDataService.list().then(response =>{
+
+                console.log("Retorno do seviço VendedorDataService.list", response.status);
+
+                for(let v of response.data){
+
+                    this.vendedor.push(v);
+                }                  
+
+                }).catch(response => {
+
+                // error callback
+                alert('Não conectou no serviço VendedorDataService.list');
+                console.log(response);
+                });               
+            },
             updateVenda(){
-                console.log("Entrou update Venda (edit.vue)");
+                console.log(data_venda);
+                console.log("Entrou update currentVenda (edit.vue)");
                 VendaDataService.update(this.currentVenda)
                 .then(response => {
                     console.log('VendaDataService.update');
-                    this.message = 'Venda alterado com sucesso !';
+                    this.message = 'currentVenda alterado com sucesso !';
                 })
                 .catch(e =>{
                     console.log(e);
                 })
             },
             deleteVenda(){
-                console.log("Entrou delete Venda (edit.vue)");
-                VendaDataService.delete(this.currentTutorial.id)
+                console.log("Entrou delete currentVenda (edit.vue)");
+                VendaDataService.delete(this.currentVenda.id)
                 .then(response => {
                     console.log(response.data);
                     this.$router.push({ name: "vendas-list" });
@@ -153,6 +201,8 @@
             
             this.message = '';
             this.listVeiculos();
+            this.listCompradores();
+            this.listVendedores();
             this.getVenda(this.$route.params.id);
          }
      }

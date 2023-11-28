@@ -6,7 +6,7 @@ class TipoDataService {
     async get(id){
 
         console.log('TipoDataService.get: ', id);
-        return await http.get('/tipo/'+id);
+        return await http.get('/tipo/find/'+id);
     }
 
     async list(){

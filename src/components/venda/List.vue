@@ -10,8 +10,8 @@
                     <th scope="col">Valor</th>
                     <th scope="col">Forma Pagamento</th>
                     <th scope="col">Data Venda</th>
-                    <th scope="col">Cpf_comprador</th>
-                    <th scope="col">Cpf_vendedor</th>
+                    <th scope="col">Compradores</th>
+                    <th scope="col">Vendedores</th>
                     <!-- <th scope="col">Veiculo</th>   -->
 
                     <th scope="col">Alterar</th> 
@@ -22,9 +22,9 @@
                             <td>{{vend.id}}</td>
                             <td>{{vend.valor}}</td>
                             <td>{{vend.forma_pagamento}}</td>
-                            <td>{{vend.data_venda}}</td>
-                            <td>{{vend.cpf_comprador}}</td>
-                            <td>{{vend.cpf_vendedor}}</td>
+                            <td>{{vend.data_venda | formataData}}</td>
+                            <td>{{vend.comprador.nome}}</td>
+                            <td>{{vend.vendedor.nome}}</td> 
                             <!-- <td>{{vend.veiculo}}</td> -->
                             
                                                 
@@ -52,10 +52,10 @@
                         <label><strong>Data Venda:</strong></label> {{ currentVenda.data_venda }}
                     </div>
                     <div>
-                        <label><strong>Cpf_comprador:</strong></label> {{ currentVenda.cpf_comprador }}
+                        <label><strong>Compradores:</strong></label> {{ currentVenda.comprador.nome }}
                     </div>
                     <div>
-                        <label><strong>Cpf_vendedor:</strong></label> {{ currentVenda.cpf.vendedor }}
+                        <label><strong>Vendedores:</strong></label> {{ currentVenda.vendedor.nome }}
                     </div>
                     <!-- <div>
                         <label><strong>Veiculo:</strong></label> {{ currentVenda.veiculo }}
@@ -63,7 +63,7 @@
 
 
                     <a class="badge badge-warning"
-                    :href="'/venda/' + currentVenda.id"
+                    :href="'/venda/update/' + currentVenda.id"
                     >
                     Edit
                     </a>
@@ -83,7 +83,9 @@
     
  
      import VendaDataService from '../../services/VendaDataService'
-     //import VeiculoDataService from '../../services/VeiculoDataService'    
+     import VeiculoDataService from '../../services/VeiculoDataService'
+     import CompradorDataService from '../../services/CompradorDataService'
+     import VendedorDataService from '../../services/VendedorDataService'   
  
      export default{
       name:'listVendas',
@@ -102,6 +104,7 @@
                     console.log("Retorno do seviço list Venda", response.status);
 
                    this.vendas = response.data;
+                   console.log(this.vendas);
 
                 }).catch(response => {
 

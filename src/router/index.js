@@ -21,7 +21,7 @@ import novoVeiculo from '@/components/veiculo/Add'
 
 //Venda
 import listVendas from '@/components/venda/List'
-//import editVenda from '@/components/venda/Edit'
+import editVenda from '@/components/venda/Edit'
 import novoVenda from '@/components/venda/Add'
 
 //Tipo
@@ -106,13 +106,11 @@ const router = new Router({
       name: 'vendas-list',
       component: listVendas    
     },
-    /*
     {
-      path: '/venda/:id',
+      path: '/venda/update/:id',
       name: "venda-edit",
       component: editVenda
     },
-    */
     {
       path: '/addVenda',
       name: "venda-add",
