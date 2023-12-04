@@ -2,7 +2,7 @@
     <div id="tab_aut">
      
        <div v-if="currentVenda" class="edit-form">
-            <h3>currentVenda</h3>
+            <h3>Edit Venda</h3>
             <form>
                 <!-- Input ID -->
                 <div class="form-group">
@@ -22,6 +22,7 @@
                     <input type="number" v-model="currentVenda.data_venda" class="form-control" id="inputDt_venda" disabled>
                 </div>
                 -->
+                
                 
 
 
@@ -54,10 +55,10 @@
                 </div>
 
         
-                <!-- Select Vendedores -->
-                <div class="form-group">
+                  <!-- Select Compradores -->
+                  <div class="form-group">
                     <label for="selectVendedor">Vendedores:</label>
-                    <select v-model="currentVenda.vendedor" class="form-control" id="selectVendedor">                                
+                    <select v-model="currentVenda.vendedor" class="form-control" id="selectvendedor">                                
                         <option v-for="v in vendedor" :key ="v.cpf" v-bind:value="v">
                             {{ v.nome }}
                         </option>
@@ -84,7 +85,7 @@
        </div>
        <div v-else>
             <br />
-            <p>Por favor clique em uma currentVenda...</p>
+            <p>Por favor clique em uma Venda...</p>
         </div>
 
                                           
@@ -116,7 +117,8 @@
                 .then(response => {
                     console.log(response.data);
                     this.currentVenda = response.data;
-                    
+                    console.log(this.currentVenda.vendedor);
+                    console.log(this.currentVenda.comprador);
                 })
                 .catch(e=> {
                     console.log(e);
@@ -156,7 +158,7 @@
                 });               
             },
             listVendedores(){
-                VendedorDataService.list().then(response =>{
+                VendedorDataService.list_basico_ven().then(response =>{
 
                 console.log("Retorno do seviço VendedorDataService.list", response.status);
 
@@ -178,7 +180,7 @@
                 VendaDataService.update(this.currentVenda)
                 .then(response => {
                     console.log('VendaDataService.update');
-                    this.message = 'currentVenda alterado com sucesso !';
+                    this.message = 'Venda alterado com sucesso !';
                 })
                 .catch(e =>{
                     console.log(e);
@@ -206,6 +208,7 @@
             this.listCompradores();
             this.listVendedores();
             this.getVenda(this.$route.params.id);
+            console.log(this.currentVenda);
          }
      }
  </script>

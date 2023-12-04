@@ -119,7 +119,10 @@
                 var ven = jQuery.extend({}, this.venda.vendedor);//clona o this.novo_venda.veiculo                            
                 //vend.veiculos = veic;     
                 vend.comprador = comp;
-                vend.vendedor = ven;                                            
+                vend.vendedor = ven;
+                vend.vendedor.veiculos = vend.veiculos.id;  
+                console.log(this.venda);
+                                               
 
                 if (vend.valor.trim().length > 0  ) {
                 

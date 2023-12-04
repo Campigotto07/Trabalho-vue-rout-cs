@@ -24,7 +24,7 @@ class VendaDataService {
     async update(data){
 
         console.log('VendaDataService.update: ', data);
-        return await http.post(`/venda/update`, data);
+        return await http.post(`/venda/update/:id`, data);
     }
     
     async create(data){

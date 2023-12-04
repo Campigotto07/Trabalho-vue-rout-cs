@@ -21,6 +21,12 @@ class VendedorDataService {
         console.log('VendedorDataService.list: ');
         return await http.get(`/vendedor/list`); 
     }
+    
+    async list_basico_ven(){
+
+        console.log('VendedorDataService.list: ');
+        return await http.get(`/vendedor/list_basico_ven`);
+    }
 
     async delete(cpf){
 

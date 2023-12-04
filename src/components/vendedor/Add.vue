@@ -59,7 +59,7 @@
         <div class="form-group">
             <label for="selectVeiculo">Veiculos:</label>
             <select v-model="vendedor.veiculo" class="form-control" id="selectVeiculo" multiple>                                
-                <option v-for="v in veiculos" :key ="v.codigo" v-bind:value="v">
+                <option v-for="v in veiculos" :key ="v.id" v-bind:value="v">
                     {{ v.modelo }}
                     </option>
             </select>
@@ -109,7 +109,7 @@
 
                 var vndor = jQuery.extend({}, this.vendedor);//clona o this.novo_vendedor e armazena na variavel vendedor. dessa forma alteracoes em this.novo_vendedor nao irao refletir em vendedor.
                 var veic = jQuery.extend({}, this.vendedor.veiculo);//clona o this.novo_vendedor.endereco                        
-                vndor.veiculos.id = veic; 
+                vndor.veiculos = veic; 
                 console.log(veic);                                               
 
                 if (vndor.cpf.trim().length > 0 && vndor.nome.trim().length > 0 && 

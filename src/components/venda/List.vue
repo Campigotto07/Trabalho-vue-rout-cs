@@ -51,7 +51,7 @@
 
                     <!-- <div>
                         <label><strong>Data Venda:</strong></label> {{ currentVenda.data_venda }}
-                    </div> -->
+                    </div>  -->
 
                     <div>
                         <label><strong>Compradores:</strong></label> {{ currentVenda.comprador.nome }}
