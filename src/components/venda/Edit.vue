@@ -16,11 +16,13 @@
                         <input type="number" v-model="currentVenda.valor" class="form-control" id="inputValor">
                 </div>
 
-                <!-- Input Data currentVenda -->
+                <!-- Input Data_Venda 
                 <div class="form-group">
                     <label for="inputDt_venda">Data Venda:</label>
                     <input type="number" v-model="currentVenda.data_venda" class="form-control" id="inputDt_venda" disabled>
                 </div>
+                -->
+                
 
 
                 <!-- Input Forma Pagamento -->
@@ -171,7 +173,7 @@
                 });               
             },
             updateVenda(){
-                console.log(data_venda);
+                //console.log(data_venda);
                 console.log("Entrou update currentVenda (edit.vue)");
                 VendaDataService.update(this.currentVenda)
                 .then(response => {

@@ -62,8 +62,8 @@
 
         <div class="form-group">
             <label for="selectTipo">Tipos:</label>
-            <select v-model="veiculo.tipos" class="form-control" id="selectTipo">                                
-                <option v-for="t in tipos" :key ="t.codigo" v-bind:value="t">
+            <select v-model="veiculo.tipo" class="form-control" id="selectTipo">                                
+                <option v-for="t in tipos" :key ="t.id" v-bind:value="t">
                     {{ t.descricao }}
                     </option>
             </select>
@@ -103,7 +103,7 @@
                                     combustivel: '',
                                     preco: 0,
                                     status: 0,
-                                    tipos: {}},
+                                    tipo: {}},
                 submitted: false,
                 tipos: []
 
@@ -115,7 +115,7 @@
                 console.log("Clicou no botão salvar Veiculo");
 
                 var v = jQuery.extend({}, this.veiculo);//clona o this.novo_veiculo e armazena na variavel veiculo. dessa forma alteracoes em this.novo_veiculo nao irao refletir em veiculo.                        
-                var tip = jQuery.extend({}, this.veiculo.tipos);//clona o this.novo_veiculo.tipo 
+                var tip = jQuery.extend({}, this.veiculo.tipo);//clona o this.novo_veiculo.tipo 
                 v.tipos = tip;                                                
 
                 if (v.placa.trim().length > 0 && v.ano.trim().length > 0 && 

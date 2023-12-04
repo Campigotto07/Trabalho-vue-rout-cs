@@ -58,7 +58,7 @@
 
         <div class="form-group">
             <label for="selectVeiculo">Veiculos:</label>
-            <select v-model="vendedor.veiculos" class="form-control" id="selectVeiculo" multiple>                                
+            <select v-model="vendedor.veiculo" class="form-control" id="selectVeiculo" multiple>                                
                 <option v-for="v in veiculos" :key ="v.codigo" v-bind:value="v">
                     {{ v.modelo }}
                     </option>
@@ -100,7 +100,7 @@
                                     senha: '',
                                     veiculo: []},
                 submitted: false,
-                veiculo: []
+                veiculos: []
             }            
         },
         methods: {
