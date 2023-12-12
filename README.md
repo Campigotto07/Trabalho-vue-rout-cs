@@ -27,7 +27,7 @@ Este repositório contém o código-fonte de uma aplicação web construída com
 
 
 <h2>Funcionalidades</h2> 
-A aplicação oferece as seguintes funcionalidades através de uma API: <br>
+A aplicação oferece as seguintes funcionalidades através de uma API: <br><br>
 
 𝗟𝗶𝘀𝘁𝗮𝗴𝗲𝗺 𝗱𝗲 𝗗𝗮𝗱𝗼𝘀: Visualização dos registros armazenados no banco de dados. <br>
 𝗜𝗻𝘀𝗲𝗿𝗰̧𝗮̃𝗼 𝗱𝗲 𝗗𝗮𝗱𝗼𝘀: Adição de novos registros ao banco de dados. <br>
