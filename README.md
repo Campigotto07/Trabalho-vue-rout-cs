@@ -11,10 +11,11 @@ Este repositório contém o código-fonte de uma aplicação web construída com
 <br/>
 
 
-## Backend:
-### Framework: $Express$
-### Banco de Dados: $PostgreSQL (PG)$
-### ORM: $TypeORM$
+<h2>Backend:</h2> 
+𝗙𝗿𝗮𝗺𝗲𝘄𝗼𝗿𝗸:  Express
+𝗕𝗮𝗻𝗰𝗼 𝗱𝗲 𝗗𝗮𝗱𝗼𝘀: PostgreSQL (PG)
+𝗢𝗥𝗠: TypeORM
+<br>
 ### Servidor de Aplicação: $Node.js$ 
 <br/>
 <br/>
