@@ -9,15 +9,15 @@ Este repositório contém o código-fonte de uma aplicação web construída com
 
 <br/>
 <br/>
-<br/>
- 
 
 
 ## Backend:
 ### Framework: $Express$
 ### Banco de Dados: $PostgreSQL (PG)$
 ### ORM: $TypeORM$
-### Servidor de Aplicação: $Node.js$ <br/>
+### Servidor de Aplicação: $Node.js$ 
+<br/>
+<br/>
 
 ## Frontend:
 ### Framework: $Vue.js$
