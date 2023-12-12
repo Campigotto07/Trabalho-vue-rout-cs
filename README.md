@@ -35,7 +35,6 @@ A aplicação oferece as seguintes funcionalidades através de uma API: <br><br>
 𝗘𝘅𝗰𝗹𝘂𝘀𝗮̃𝗼 𝗱𝗲 𝗗𝗮𝗱𝗼𝘀: Remoção de registros do banco de dados. <br>
 
 <br>
-<br>
 
 <h2>Configuração e Execução<h2/>
 Para configurar e executar o projeto, siga as instruções abaixo:
