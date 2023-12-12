@@ -8,7 +8,7 @@ Este repositório contém o código-fonte de uma aplicação web construída com
 ### Linguagem de Script: $JavaScript$
 ### ━━━━━━━ ⟡ ━━━━━━━
 
-
+ 
 
 
 ## Backend:
