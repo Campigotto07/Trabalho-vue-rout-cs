@@ -17,7 +17,6 @@ Este repositório contém o código-fonte de uma aplicação web construída com
 𝗢𝗥𝗠: TypeORM <br>
 <br>
 Servidor de Aplicação: Node.js
-`_#RRGGBB`
 <br/>
 <br/>
 
