@@ -70,7 +70,7 @@ A estrutura do projeto está organizada da seguinte forma: <br><br>
 /𝘀𝗿𝗰/𝗺𝗼𝗱𝗲𝗹𝘀: Modelos de dados. <br>
 /𝘀𝗿𝗰/𝗿𝗼𝘂𝘁𝗲𝘀: Rotas da aplicação. <br>
 /𝘀𝗿𝗰/𝘃𝗶𝗲𝘄𝘀: Componentes do frontend (Vue.js). <br>
-/𝗽𝘂𝗯𝗹𝗶𝗰: Contém arquivos estáticos públicos. <br><br>
+/𝗽𝘂𝗯𝗹𝗶𝗰: Contém arquivos estáticos públicos. <br>
 
 <h3>Contribuição:</h3> 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorar ou adicionar novas funcionalidades.
