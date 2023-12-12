@@ -7,8 +7,8 @@ Este repositório contém o código-fonte de uma aplicação web construída com
 <h2>Tecnologias Utilizadas:</h2> 
 𝗟𝗶𝗻𝗴𝘂𝗮𝗴𝗲𝗺 𝗱𝗲 𝗦𝗰𝗿𝗶𝗽𝘁: JavaScript
 
-<br/>
-<br/>
+<br>
+<br>
 
 
 <h2>Backend:</h2> 
@@ -16,22 +16,28 @@ Este repositório contém o código-fonte de uma aplicação web construída com
 𝗕𝗮𝗻𝗰𝗼 𝗱𝗲 𝗗𝗮𝗱𝗼𝘀: PostgreSQL (PG) <br>
 𝗢𝗥𝗠: TypeORM <br>
 𝗦𝗲𝗿𝘃𝗶𝗱𝗼𝗿 𝗱𝗲 𝗔𝗽𝗹𝗶𝗰𝗮𝗰̧𝗮̃𝗼: Node.js
-<br/>
-<br/>
+<br>
+<br>
 
 <h2>Frontend:</h2> 
 𝗙𝗿𝗮𝗺𝗲𝘄𝗼𝗿𝗸: Vue.js <br>
 𝗕𝗶𝗯𝗹𝗶𝗼𝘁𝗲𝗰𝗮 𝗱𝗲 𝗘𝘀𝘁𝗶𝗹𝗼: Bootstrap 
-<br/>
+<br>
+<br>
 
-## Funcionalidades
+
+<h2>Funcionalidades</h2> 
 A aplicação oferece as seguintes funcionalidades através de uma API:
 
-### Listagem de Dados: $Visualização$ $dos$ $registros$ $armazenados$ $no$ $banco$ $de$ $dados.$
-### Inserção de Dados: $Adição de novos registros ao banco de dados.$
-### Atualização de Dados: $Modificação de registros existentes no banco de dados.$
-### Exclusão de Dados: $Remoção de registros do banco de dados.$
-Configuração e Execução
+𝗟𝗶𝘀𝘁𝗮𝗴𝗲𝗺 𝗱𝗲 𝗗𝗮𝗱𝗼𝘀: Visualização dos registros armazenados no banco de dados.
+𝗜𝗻𝘀𝗲𝗿𝗰̧𝗮̃𝗼 𝗱𝗲 𝗗𝗮𝗱𝗼𝘀: Adição de novos registros ao banco de dados.
+𝗔𝘁𝘂𝗮𝗹𝗶𝘇𝗮𝗰̧𝗮̃𝗼 𝗱𝗲 𝗗𝗮𝗱𝗼𝘀: Modificação de registros existentes no banco de dados.
+𝗘𝘅𝗰𝗹𝘂𝘀𝗮̃𝗼 𝗱𝗲 𝗗𝗮𝗱𝗼𝘀: Remoção de registros do banco de dados.
+
+<br>
+<br>
+
+<h2>Configuração e Execução<h2/>
 Para configurar e executar o projeto, siga as instruções abaixo:
 
 Clonar o repositório:
