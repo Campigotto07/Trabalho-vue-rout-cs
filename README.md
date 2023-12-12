@@ -16,7 +16,7 @@ Este repositório contém o código-fonte de uma aplicação web construída com
 𝗕𝗮𝗻𝗰𝗼 𝗱𝗲 𝗗𝗮𝗱𝗼𝘀: PostgreSQL (PG) <br>
 𝗢𝗥𝗠: TypeORM <br>
 <br>
-** Servidor de Aplicação:** Node.js
+__Servidor de Aplicação:__ Node.js
 <br/>
 <br/>
 
