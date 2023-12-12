@@ -63,13 +63,11 @@ Acesse a aplicação através do navegador, geralmente em http://localhost:3000.
 <br>
 
 <h2>Estrutura do Projeto</h2> 
-A estrutura do projeto está organizada da seguinte forma: <br>
+A estrutura do projeto está organizada da seguinte forma: <br><br>
 
-<h3> /src:</h3> 
-Contém o código-fonte da aplicação. <br>
-
-/src/controllers: Controladores da aplicação.
-/src/models: Modelos de dados.
+/𝘀𝗿𝗰: Contém o código-fonte da aplicação. <br>
+/𝘀𝗿𝗰/𝗰𝗼𝗻𝘁𝗿𝗼𝗹𝗹𝗲𝗿𝘀: Controladores da aplicação. <br>
+/𝘀𝗿𝗰/𝗺𝗼𝗱𝗲𝗹𝘀: Modelos de dados. <br>
 /src/routes: Rotas da aplicação.
 /src/views: Componentes do frontend (Vue.js).
 /public: Contém arquivos estáticos públicos.
