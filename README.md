@@ -61,10 +61,13 @@ Acesse a aplicação através do navegador, geralmente em http://localhost:3000.
 
 <br>
 <br>
-Estrutura do Projeto
-A estrutura do projeto está organizada da seguinte forma:
 
-/src: Contém o código-fonte da aplicação.
+<h2>Estrutura do Projeto</h2> 
+A estrutura do projeto está organizada da seguinte forma: <br>
+
+<h3> /src:</h3> 
+Contém o código-fonte da aplicação. <br>
+
 /src/controllers: Controladores da aplicação.
 /src/models: Modelos de dados.
 /src/routes: Rotas da aplicação.
