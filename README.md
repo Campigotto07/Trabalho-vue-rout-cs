@@ -1,4 +1,4 @@
-#Site Desenvolvido - API com JavaScript, Express, PG e TypeORM
+# Site Desenvolvido - API com JavaScript, Express, PG e TypeORM
 
 Descrição do Projeto
 Este repositório contém o código-fonte de uma aplicação web construída como uma API utilizando JavaScript, Express, PG (PostgreSQL) e TypeORM. A aplicação fornece operações CRUD (Create, Read, Update, Delete) e foi desenvolvida com o framework Vue.js para o frontend e a biblioteca Bootstrap para o estilo.
