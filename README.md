@@ -39,27 +39,28 @@ A aplicação oferece as seguintes funcionalidades através de uma API: <br><br>
 <h2>Configuração e Execução<h2/>
 Para configurar e executar o projeto, siga as instruções abaixo:
 
-Clonar o repositório:
-
-bash
-Copy code
-git clone https://github.com/seu-usuario/nome-do-repositorio.git
+<h3> 1º Clonar o repositório:</h3> 
+git clone https://github.com/seu-usuario/nome-do-repositorio.git <br>
 cd nome-do-repositorio
-Instalar as Dependências:
 
-bash
-Copy code
+<br>
+
+<h3> 2º Instalar as Dependências:</h3>
 npm install
-Configuração do Banco de Dados:
 
+<br>
+
+<h3> 3º Configuração do Banco de Dados:</h3> 
 Crie um banco de dados PostgreSQL e configure as credenciais no arquivo ormconfig.json.
-Executar a Aplicação:
 
-bash
-Copy code
-npm start
+<br>
+
+<h3> 4º Executar a Aplicação:</h3> 
+npm run dev <br>
 Acesse a aplicação através do navegador, geralmente em http://localhost:3000.
 
+<br>
+<br>
 Estrutura do Projeto
 A estrutura do projeto está organizada da seguinte forma:
 
