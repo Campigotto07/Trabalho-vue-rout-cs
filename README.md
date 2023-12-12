@@ -1,10 +1,3 @@
-# vuejs_router_componets_cs
-
-> utilizacao de componentes para a interface grafica do estudo de caso: CS
-
-## Build Setup
-
-``` bash
 # install dependencies
 npm install
 
@@ -27,8 +20,3 @@ https://programandosolucoes.dev.br/2021/09/14/login-com-vuejs/
 
 
 https://vuejs.org/guide/essentials/component-basics.html
-```
-
-
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
