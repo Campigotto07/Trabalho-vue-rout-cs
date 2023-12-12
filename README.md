@@ -20,7 +20,7 @@ Este repositório contém o código-fonte de uma aplicação web construída com
 <br/>
 
 <h2>Frontend:</h2> 
-𝗙𝗿𝗮𝗺𝗲𝘄𝗼𝗿𝗸: Vue.js
+𝗙𝗿𝗮𝗺𝗲𝘄𝗼𝗿𝗸: Vue.js <br>
 𝗕𝗶𝗯𝗹𝗶𝗼𝘁𝗲𝗰𝗮 𝗱𝗲 𝗘𝘀𝘁𝗶𝗹𝗼: Bootstrap 
 <br/>
 
