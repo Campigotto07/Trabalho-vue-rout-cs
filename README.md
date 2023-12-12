@@ -17,12 +17,13 @@ Este repositório contém o código-fonte de uma aplicação web construída com
 ### Framework: $Express$
 ### Banco de Dados: $PostgreSQL (PG)$
 ### ORM: $TypeORM$
-### Servidor de Aplicação: &Node.js&
+### Servidor de Aplicação: $Node.js$ <br/>
 
 ## Frontend:
-### Framework: Vue.js
-### Biblioteca de Estilo: Bootstrap
-Funcionalidades
+### Framework: $Vue.js$
+### Biblioteca de Estilo: $Bootstrap$ <br/>
+
+##Funcionalidades
 A aplicação oferece as seguintes funcionalidades através de uma API:
 
 Listagem de Dados: Visualização dos registros armazenados no banco de dados.
