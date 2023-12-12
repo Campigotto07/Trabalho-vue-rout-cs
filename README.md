@@ -36,8 +36,8 @@ A aplicação oferece as seguintes funcionalidades através de uma API: <br><br>
 
 <br>
 
-<h2>Configuração e Execução<h2/>
-Para configurar e executar o projeto, siga as instruções abaixo:<br>
+<h2>Configuração e Execução</h2>
+Para configurar e executar o projeto, siga as instruções abaixo:
 
 <h3> 1º Clonar o repositório:</h3>  
 git clone https://github.com/seu-usuario/nome-do-repositorio.git <br>
