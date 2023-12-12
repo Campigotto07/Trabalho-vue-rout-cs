@@ -6,12 +6,11 @@ Este repositório contém o código-fonte de uma aplicação web construída com
 
 ## Tecnologias Utilizadas
 ### Linguagem de Script: $JavaScript$
-
 ## Backend:
-### Framework: Express
-### Banco de Dados: PostgreSQL (PG)
-### ORM: TypeORM
-### Servidor de Aplicação: Node.js
+### Framework: $Express$
+### Banco de Dados: $PostgreSQL (PG)$
+### ORM: $TypeORM$
+### Servidor de Aplicação: &Node.js&
 
 ## Frontend:
 ### Framework: Vue.js
