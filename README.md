@@ -6,8 +6,8 @@ Este repositório contém o código-fonte de uma aplicação web construída com
 
 ## Tecnologias Utilizadas
 ### Linguagem de Script: $JavaScript$
-### ━━━━━━━ ⟡ ━━━━━━━
 
+# 
  
 
 
