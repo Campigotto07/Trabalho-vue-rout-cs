@@ -8,15 +8,15 @@ Este repositório contém o código-fonte de uma aplicação web construída com
 ### Linguagem de Script: 
 JavaScript
 
-##Backend:
-###Framework: Express
-###Banco de Dados: PostgreSQL (PG)
-###ORM: TypeORM
-###Servidor de Aplicação: Node.js
+## Backend:
+### Framework: Express
+### Banco de Dados: PostgreSQL (PG)
+### ORM: TypeORM
+### Servidor de Aplicação: Node.js
 
-##Frontend:
-###Framework: Vue.js
-###Biblioteca de Estilo: Bootstrap
+## Frontend:
+### Framework: Vue.js
+### Biblioteca de Estilo: Bootstrap
 Funcionalidades
 A aplicação oferece as seguintes funcionalidades através de uma API:
 
