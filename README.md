@@ -19,9 +19,10 @@ Este repositório contém o código-fonte de uma aplicação web construída com
 <br/>
 <br/>
 
-## Frontend:
-### Framework: $Vue.js$
-### Biblioteca de Estilo: $Bootstrap$ <br/>
+<h2>Frontend:</h2> 
+𝗙𝗿𝗮𝗺𝗲𝘄𝗼𝗿𝗸: Vue.js
+𝗕𝗶𝗯𝗹𝗶𝗼𝘁𝗲𝗰𝗮 𝗱𝗲 𝗘𝘀𝘁𝗶𝗹𝗼: Bootstrap 
+<br/>
 
 ## Funcionalidades
 A aplicação oferece as seguintes funcionalidades através de uma API:
