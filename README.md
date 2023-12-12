@@ -68,11 +68,12 @@ A estrutura do projeto está organizada da seguinte forma: <br><br>
 /𝘀𝗿𝗰: Contém o código-fonte da aplicação. <br>
 /𝘀𝗿𝗰/𝗰𝗼𝗻𝘁𝗿𝗼𝗹𝗹𝗲𝗿𝘀: Controladores da aplicação. <br>
 /𝘀𝗿𝗰/𝗺𝗼𝗱𝗲𝗹𝘀: Modelos de dados. <br>
-/src/routes: Rotas da aplicação.
-/src/views: Componentes do frontend (Vue.js).
-/public: Contém arquivos estáticos públicos.
-Contribuição
+/𝘀𝗿𝗰/𝗿𝗼𝘂𝘁𝗲𝘀: Rotas da aplicação. <br>
+/𝘀𝗿𝗰/𝘃𝗶𝗲𝘄𝘀: Componentes do frontend (Vue.js). <br>
+/𝗽𝘂𝗯𝗹𝗶𝗰: Contém arquivos estáticos públicos. <br><br>
+
+<h3>Contribuição:</h3> 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorar ou adicionar novas funcionalidades.
 
-Licença
+<h3>Licença:</h3> 
 Este projeto está licenciado sob a Licença MIT.
