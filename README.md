@@ -5,7 +5,7 @@
 Este repositório contém o código-fonte de uma aplicação web construída como uma API utilizando JavaScript, Express, PG (PostgreSQL) e TypeORM. A aplicação fornece operações CRUD (Create, Read, Update, Delete) e foi desenvolvida com o framework Vue.js para o frontend e a biblioteca Bootstrap para o estilo.
 
 <h2>Tecnologias Utilizadas:</h2> 
-<p>Linguagem de Script:</p> JavaScript
+<h3>Linguagem de Script:<p>JavaScript</p> </h3>
 
 <br/>
 <br/>
